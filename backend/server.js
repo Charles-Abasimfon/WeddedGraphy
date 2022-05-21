@@ -13,8 +13,12 @@ const connectDB = require('./config/db');
 connectDB();
 
 /* ROUTES -- START */
-app.use('/api/demos', require('./routes/demoRoutes'));
-app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/client', require('./routes/clientRoutes'));
+app.use('/api/freelancer', require('./routes/freelancerRoutes'));
+app.use('/api/job', require('./routes/jobRoutes'));
+app.use('/api/proposal', require('./routes/proposalRoutes'));
+app.use('/api/portfolio', require('./routes/portfolioRoutes'));
+app.use('/api/review', require('./routes/reviewRoutes'));
 /* ROUTES -- END */
 
 //Serve frontend in production ready application
